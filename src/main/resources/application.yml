@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    platform: mysql
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306
+    username: root
+    password: patent
+    tomcat:
+      test-while-idle: true
+---
+spring:
+  profiles: dev
+---
+spring:
+  profiles: prod
