@@ -9,3 +9,13 @@
     * /
    #end 
 ``` 
+
+# Use `Mysql` docker image when developing in local env.
+command:
+```aidl
+1. docker pull mysql  
+2. docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=patent --name mysql_local mysql
+3. docker ps
+4. docker exec -it mysql_local bash  
+5. mysql -u root -p => password input ! 
+```

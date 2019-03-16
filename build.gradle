@@ -36,6 +36,9 @@ dependencies {
 
     // kotlin config
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+    // mysql config
+    compile "mysql:mysql-connector-java:5.1.46"
 }
 
 compileKotlin {
