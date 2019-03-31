@@ -1,14 +1,11 @@
 package com.patent.patent.dto.board;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDate;
 
-@Getter
-@Setter
-@ToString
+@Data
+@Builder(toBuilder = true)
 public class Board {
     private int num;
     private String register;

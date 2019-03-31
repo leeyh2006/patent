@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/api/boards")
 public class BoardController {
+    // main page에서 사용되는 인덱스.
     private static final int DEFAULT_INDEX = 0;
 
     private final BoardService boardService;
