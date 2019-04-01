@@ -1,12 +1,27 @@
 spring:
   datasource:
-    platform: mysql
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306
+    url: jdbc:mysql://localhost:3306/patent?useSSL=false
     username: root
     password: patent
-    tomcat:
-      test-while-idle: true
+#  boot:
+#    admin:
+#      client:
+#        url: localhost:1111/
+#        period: 5000
+#        connect-timeout: 1000
+
+# management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#  endpoint:
+#    health:
+#      show-details: ALWAYS
+
+server:
+  port: 0
 ---
 spring:
   profiles: dev

@@ -18,6 +18,7 @@ configurations {
 
 repositories {
     mavenCentral()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
 }
 
 // 추후에 의존성 버전에 대한 관리를 어떻게 할지 생각해봐야 될듯.
