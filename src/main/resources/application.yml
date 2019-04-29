@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/patent?useSSL=false
-    username: root
-    password: patent
+    url: jdbc:mysql://localhost:3306/patentnew?useSSL=false
+    username: cbm7119
+    password: Sofkdsn001!
 #  boot:
 #    admin:
 #      client:

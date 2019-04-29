@@ -4,19 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity
+@Entity(name = "member")
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
 public class Member {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name =  "mem_no")
     private Long memNo;
 
@@ -37,6 +33,23 @@ public class Member {
 
     @Column(name = "tel_num", nullable = true)
     private Long telNum;
+
+    protected Member(){}
+
+    public Member(String memId, String memPw, String memNm, Long memTp, Long phoneNum, Long telNum){
+        this.memId = memId;
+        this.memPw = memPw;
+        this.memNm = memNm;
+        this.memTp = memTp;
+        this.phoneNum = phoneNum;
+        this.telNum = telNum;
+
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Member[memId='%d', memPw='%s']", memId, memPw);
+    }
 
 
 }
