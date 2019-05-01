@@ -21,9 +21,19 @@ public class MemberController {
     }
     @ApiOperation(value = "join member")
     @PostMapping(value = "/join")
-    //회원 Id와 Pw을 입력받아 새로운 Member를 생성하고 그 결과를 반환
+    //회원 정보를 새로운 Member를 생성하고 그 결과를 반환
+    //추후 비밀번호의 형태를 정의하여 로직에 추가.
+    //추후 필수 회원정보를 정하여 체크하도록 추가.
     public Member create(@RequestParam String memId, String memPw, String memNm, Long memTp, Long phoneNum, Long telNum ){
         return memberService.add(memId, memPw, memNm, memTp, phoneNum, telNum);
+    }
+
+    @ApiOperation(value = "Login member")
+    @PostMapping(value = "/login")
+    //회원 id, pw를 입력받아 로그인
+    //추후 비즈니스 로직을 정의하여 적용하고 oauth2 적용으로 넘어가겠다.
+    public Member retrieve(@RequestParam String memId, String memPw){
+        return memberService.login(memId, memPw);
     }
 
     @PostMapping(value = "/me")
@@ -31,6 +41,8 @@ public class MemberController {
         return member;
     }
 
+
+    //
     /*
     @ApiOperation(value = "join member")
     @PostMapping(value = "/join")

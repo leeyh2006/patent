@@ -40,6 +40,9 @@ dependencies {
 
     // mysql config
     compile "mysql:mysql-connector-java:5.1.46"
+
+    compile('org.springframework.boot:spring-boot-starter-security')
+    compile('org.springframework.security.oauth:spring-security-oauth2')
 }
 
 compileKotlin {
